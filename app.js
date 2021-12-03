@@ -1,3 +1,10 @@
+const propriete1 = document.getElementsByClassName("propriete1");
+const propriete2 = document.getElementsByClassName("propriete2");
+const propriete3 = document.getElementsByClassName("propriete3");
+const propriete4 = document.getElementsByClassName("propriete4");
+const propriete5 = document.getElementsByClassName("propriete5");
+
+
 const Person = function (name, firstName,age,sex,hobbies) {
     this.name = name;
     this.firstName = firstName;
@@ -12,12 +19,12 @@ const Person = function (name, firstName,age,sex,hobbies) {
 
     //Return age
     this.getAge = function () {
-        return this.age.join(',');
+        return this.age;
     }
 
     //Return sex
     this.getSex = function () {
-        return this.sex.join(',');
+        return this.sex;
     }
 
     //Return hobbies
@@ -30,6 +37,17 @@ let angelique = new Person ('Dehainaut','Angélique', 33 , 'femme', ['l/écritur
 let louane = new Person('Laurent', 'Louane', 9,'femme', ['la boxe', 'les chevaux', 'la musique']);
 
 perso1 = document.getElementById("perso1");
-perso1.innerHTML = angelique;
+
+propriete1[0].innerHTML = angelique.name;
+propriete2[0].innerHTML = angelique.firstName;
+propriete3[0].innerHTML = angelique.age;
+propriete4[0].innerHTML = angelique.sex;
+propriete5[0].innerHTML = angelique.hobbies;
+
 perso2 = document.getElementById("perso2");
-perso2.innerHTML = louane;
+propriete1[1].innerHTML = louane.name;
+propriete2[1].innerHTML = louane.firstName;
+propriete3[1].innerHTML = louane.age;
+propriete4[1].innerHTML = louane.sex;
+propriete5[1].innerHTML = louane.hobbies;
+
